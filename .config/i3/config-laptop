@@ -1,0 +1,146 @@
+# This configuration uses Mod1 and Mod3. Make sure they are mapped properly using xev(1)
+# and xmodmap(1). Usually, Mod1 is Alt (Alt_L) and Mod3 is Windows (Super_L)
+#exec startup.sh
+
+workspace 1 output DP2
+workspace 2 output DP2
+workspace 3 output DP2
+workspace 4 output DP2
+workspace 5 output DP2
+workspace 6 output DP2
+workspace 7 output DP2
+workspace 8 output DP2
+workspace 9 output DP2
+workspace 10 output LVDS1
+
+for_window [class="rdesktop"] fullscreen enable
+
+assign [class="Firefox"] 2
+assign [class="Firefox-bin"] 2
+assign [class="Iceweasel"] 2
+assign [class="Xombrero"] 2
+
+# ISO 10646 = Unicode
+font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+
+# Use Mouse+Mod1 to drag floating windows to their wanted position
+floating_modifier Mod1
+
+bindsym Mod1+c split h
+bindsym Mod1+v split v
+
+# Fullscreen (Mod1+f)
+bindsym Mod1+f fullscreen
+
+# Stacking (Mod1+h)
+bindsym Mod1+s layout stacking
+
+# Tabbed (Mod1+w)
+bindsym Mod1+t layout tabbed
+
+# Default (Mod1+e)
+bindsym Mod1+d layout default
+
+# Toggle tiling/floating of the current window (Mod1+Shift+Space)
+bindcode Mod1+Shift+65 floating toggle
+
+# Go into the tiling layer / floating layer, depending on whether
+# the current window is tiling / floating (Mod1+t)
+bindcode Mod1+28 focus mode_toggle
+
+# Focus (Mod1+j/k/l/;)
+bindsym Mod1+h focus left
+bindsym Mod1+j focus down
+bindsym Mod1+k focus up
+bindsym Mod1+l focus right
+# (alternatively, you can use the cursor keys:)
+bindsym Mod1+Left focus left
+bindsym Mod1+Down focus down
+bindsym Mod1+Up focus up
+bindsym Mod1+Right focus right
+
+# Focus Container (Mod3+j/k/l/;)
+bindsym Mod3+h focus parent; focus left
+bindsym Mod3+j focus parent; focus down
+bindsym Mod3+k focus parent; focus up
+bindsym Mod3+l focus parent; focus right
+# (alternatively, you can use the cursor keys:)
+bindsym Mod3+Left focus left
+bindsym Mod3+Down focus down
+bindsym Mod3+Up focus up
+bindsym Mod3+Right focus right
+
+# Snap (Mod1+Control+j/k/l/;)
+bindsym Mod1+Control+h layout stacking
+bindsym Mod1+Control+j layout stacking
+bindsym Mod1+Control+k layout stacking
+bindsym Mod1+Control+l layout stacking
+# (alternatively, you can use the cursor keys:)
+bindsym Mod1+Control+Left focus left
+bindsym Mod1+Control+Down focus down
+bindsym Mod1+Control+Up focus up
+bindsym Mod1+Control+Right focus right
+
+# Move (Mod1+Shift+j/k/l/;)
+bindsym Mod1+Shift+h move left
+bindsym Mod1+Shift+j move down
+bindsym Mod1+Shift+k move up
+bindsym Mod1+Shift+l move right
+# (alternatively, you can use the cursor keys:)
+bindsym Mod1+Shift+Left focus left
+bindsym Mod1+Shift+Down focus down
+bindsym Mod1+Shift+Up focus up
+bindsym Mod1+Shift+Right focus right
+
+# Move Container (Mod3+Shift+j/k/l/;)
+bindsym Mod3+Shift+h focus parent; move left
+bindsym Mod3+Shift+j focus parent; move down
+bindsym Mod3+Shift+k focus parent; move up
+bindsym Mod3+Shift+l focus parent; move right
+
+# Workspaces (Mod1+1/2/…)
+bindcode Control+10 workspace 1
+bindcode Control+11 workspace 2
+bindcode Control+12 workspace 3
+bindcode Control+13 workspace 4
+bindcode Control+14 workspace 5
+bindcode Control+15 workspace 6
+bindcode Control+16 workspace 7
+bindcode Control+17 workspace 8
+bindcode Control+18 workspace 9
+bindcode Control+19 workspace 10
+
+# Move to Workspaces
+bindcode Control+Shift+10 move workspace 1
+bindcode Control+Shift+11 move workspace 2
+bindcode Control+Shift+12 move workspace 3
+bindcode Control+Shift+13 move workspace 4
+bindcode Control+Shift+14 move workspace 5
+bindcode Control+Shift+15 move workspace 6
+bindcode Control+Shift+16 move workspace 7
+bindcode Control+Shift+17 move workspace 8
+bindcode Control+Shift+18 move workspace 9
+bindcode Control+Shift+19 move workspace 10
+
+bindsym Mod1+Control+m [title="urxvt/mutt"] focus
+bindsym Mod1+Control+i [title="urxvt/irc"]  focus
+
+# Mod1+Enter starts a new terminal
+bindcode Mod1+36 exec /usr/bin/urxvt
+
+# Mod1+Shift+q kills the current client
+bindsym Mod1+Shift+c kill
+
+# Mod1+v starts dmenu and launches the selected application
+# for now, we don’t have an own launcher
+bindsym Mod1+p exec /usr/bin/dmenu_run -b -i -nb '#000000' -nf '#ffffff' -fn neep-11
+
+# Mod1+Shift+e exits i3
+bindcode Mod1+Shift+26 exit
+
+# Mod1+Shift+r restarts i3 inplace
+bindsym Mod1+Shift+r restart
+
+bar {
+    status_command i3status
+}
