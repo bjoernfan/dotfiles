@@ -1,0 +1,6 @@
+# Packages I always install on a new server
+git-cvs
+vim
+tmux
+unattended-upgrades
+zsh
