@@ -1,0 +1,7 @@
+Downloaded from http://aoeu.info.
+
+The contents of magnus-xkb-se goes at the end of /usr/share/X11/xkb/symbols/se
+(at least on Debian).
+
+Load using:
+$ setxkbmap se svorak
