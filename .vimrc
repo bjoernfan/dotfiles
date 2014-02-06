@@ -69,6 +69,10 @@ map - <C-w>-
 map <C-Left> <C-w><
 map <C-Right> <C-w>>
 
+" * highlights the word currently under the cursor,
+" This remap prevents vim from jumping to the next instance of the word.
+nnoremap * *<C-o>
+
 if $TERM == "rxvt-unicode"
 	set t_Co=16
 endif
