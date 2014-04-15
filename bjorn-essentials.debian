@@ -6,3 +6,4 @@ unattended-upgrades
 zsh
 apt-listbugs
 debian-goodies # Mainly for the command checkreboot
+molly-guard
