@@ -75,3 +75,5 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # source perlbrew setup file
 source ~/perl5/perlbrew/etc/bashrc
+
+export GOPATH=$HOME/gocode
