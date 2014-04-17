@@ -72,3 +72,6 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# source perlbrew setup file
+source ~/perl5/perlbrew/etc/bashrc
