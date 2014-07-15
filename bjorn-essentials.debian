@@ -5,5 +5,5 @@ tmux
 unattended-upgrades
 zsh
 apt-listbugs
-debian-goodies # Mainly for the command checkreboot
+debian-goodies # Mainly for the command checkrestart
 molly-guard
