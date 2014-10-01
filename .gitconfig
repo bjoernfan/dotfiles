@@ -1,9 +1,9 @@
 [user]
-	name = Björn Pettersson
-	email = bjorn@undef.io
+    name = Björn Pettersson
+    email = bjorn@undef.io
 
 [color]
-	ui = auto
+    ui = auto
 
 [alias]
     st = status -s
