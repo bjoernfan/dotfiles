@@ -74,6 +74,6 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # source perlbrew setup file
-source ~/perl5/perlbrew/etc/bashrc
+test -f ~/perl5/perlbrew/etc/bashrc && source ~/perl5/perlbrew/etc/bashrc
 
 export GOPATH=$HOME/gocode
