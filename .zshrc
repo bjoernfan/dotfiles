@@ -77,3 +77,5 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 test -f ~/perl5/perlbrew/etc/bashrc && source ~/perl5/perlbrew/etc/bashrc
 
 export GOPATH=$HOME/gocode
+
+export EDITOR='vim'
