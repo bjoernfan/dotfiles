@@ -1,0 +1,4 @@
+METHODS="m_muttalias"
+
+MUTT_DIRECTORY="/home/bjorn/.mutt"
+MUTTALIAS_FILES="aliases"
