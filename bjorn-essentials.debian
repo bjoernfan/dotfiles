@@ -7,3 +7,4 @@ zsh
 apt-listbugs
 debian-goodies # Mainly for the command checkrestart
 molly-guard
+moreutils      # vidir, ifdata, sponge
