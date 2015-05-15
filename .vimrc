@@ -11,7 +11,7 @@ set cindent
 set history=50
 set ruler
 set number
-set clipboard=unnamedplus
+set clipboard=unnamed
 
 function! Filenc()
     if &fileencoding != ""
